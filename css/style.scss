@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+html {
+  font-family: 'Varela Round', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle at center,#e66465, #9198e5)
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+  .output {
+    grid-column: 1 / -1;
+    background-color: #0000008f;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 10px 10px 0 0;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: .7rem;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    .previous-operand {
+      color: #f0f8ff6c;
+      font-size: 1.5rem;
+    }
+    .current-operand {
+      color: aliceblue;
+      font-size: 3rem;
+    }
+  }
+
+  .span-two {
+    grid-column: span 2;
+  }
+  
+   button {
+    font-family: 'Varela Round', sans-serif;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid #b9b9b993;
+    outline: none;
+    background-color: rgba(255, 255,255, .55);
+  }
+  
+  button:hover {
+    background-color: rgba(255, 255,255, .95);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  i {
+    font-size: 1.5rem;
+    color: #e66465;
+  }
+}
+
